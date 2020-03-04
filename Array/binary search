@@ -1,0 +1,26 @@
+public class binarySearch {
+
+	public static void main(String[] args) {
+		int a[]={2,5,12,14,20,34,35,40};
+		int key=1;
+		int l=0,h=7,mid,found=0;
+		while(h>=l){
+			mid=(l+h)/2;
+			if(key==a[mid]){
+				found=1;
+				break;
+			}
+			else if(key<a[mid]){
+				h=mid-1;
+			}
+			else l=mid+1;
+		}
+   if (found==1){
+	   System.out.println(key+"element found");
+   }
+   else {
+	   System.out.println("element not found");
+    }
+}
+
+}
